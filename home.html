@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            color: #00ff7f !important;
+        }
+        .hero-section {
+            background: linear-gradient(45deg, #1a1a1a, #000);
+        }
+        .features-section {
+            background: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .login-section {
+            background: #000;
+        }
+        .card {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-body {
+            color: #fff;
+        }
+        .text-muted {
+            color: #aaa !important;
+        }
+        .btn-outline-success {
+            color: #00ff7f;
+            border-color: #00ff7f;
+        }
+        .btn-success {
+            background-color: #00ff7f;
+            border-color: #00ff7f;
+            color: #000;
+        }
+        .text-success {
+            color: #00ff7f !important;
+        }
+        .bg-success {
+            background-color: rgba(0, 255, 127, 0.2) !important;
+        }
+        .modal-content {
+            background: rgba(20, 20, 20, 0.95);
+            color: #fff;
+            backdrop-filter: blur(15px);
+        }
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-color: #00ff7f;
+        }
+        .form-select {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .form-select:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border-color: #00ff7f;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9) !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-recycle"></i> Eco-City</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">Smart Waste Management for a Better Tomorrow</h1>
+                    <p class="lead">Join us in making the world cleaner and greener through efficient waste management solutions.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Waste Management" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 features-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Choose Us</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-clock fa-2x text-success me-3"></i>
+                        <div>
+                            <h4>24/7 Service</h4>
+                            <p class="mb-0">Round-the-clock waste management solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-shield-alt fa-2x text-success me-3"></i>
+                        <div>
+                            <h4>Eco-Friendly</h4>
+                            <p class="mb-0">Environmentally responsible waste handling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-truck fa-2x text-success me-3"></i>
+                        <div>
+                            <h4>Fast Pickup</h4>
+                            <p class="mb-0">Quick and reliable waste collection service</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-chart-line fa-2x text-success me-3"></i>
+                        <div>
+                            <h4>Real-time Tracking</h4>
+                            <p class="mb-0">Track your waste collection status online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-success text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">Join thousands of satisfied customers who trust us with their waste management needs.</p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="py-5 login-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Login to Your Account</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-user-shield fa-3x text-success mb-3"></i>
+                            <h3>Authority Login</h3>
+                            <p class="text-muted">For government officials and administrators</p>
+                            <div class="text-start mb-3">
+                                <h6 class="text-success">Benefits:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-check text-success me-2"></i>Monitor waste collection activities</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Generate reports and analytics</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Manage worker assignments</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Track compliance metrics</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#authorityLoginModal">
+                                Login
+                            </button>
+                            <button class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#authoritySignupModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-3x text-success mb-3"></i>
+                            <h3>Citizen Login</h3>
+                            <p class="text-muted">For residents and community members</p>
+                            <div class="text-start mb-3">
+                                <h6 class="text-success">Benefits:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-check text-success me-2"></i>Schedule waste pickups</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Track collection status</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>View collection history</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Receive notifications</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#citizenLoginModal">
+                                Login
+                            </button>
+                            <button class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#citizenSignupModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-hard-hat fa-3x text-success mb-3"></i>
+                            <h3>Worker Login</h3>
+                            <p class="text-muted">For waste collection and processing staff</p>
+                            <div class="text-start mb-3">
+                                <h6 class="text-success">Benefits:</h6>
+                                <ul class="list-unstyled small">
+                                    <li><i class="fas fa-check text-success me-2"></i>View assigned routes</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Update collection status</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Report issues</li>
+                                    <li><i class="fas fa-check text-success me-2"></i>Access work schedule</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#workerLoginModal">
+                                Login
+                            </button>
+                            <button class="btn btn-success ms-2" data-bs-toggle="modal" data-bs-target="#workerSignupModal">
+                                Sign Up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority Login Modal -->
+    <div class="modal fade" id="authorityLoginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Authority Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="authorityLoginForm" action="index.html">
+                        <div class="mb-3">
+                            <label for="authorityEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="authorityEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authorityPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="authorityPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Citizen Login Modal -->
+    <div class="modal fade" id="citizenLoginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Citizen Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="citizenLoginForm" action="index1.html">
+                        <div class="mb-3">
+                            <label for="citizenEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="citizenEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="citizenPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Worker Login Modal -->
+    <div class="modal fade" id="workerLoginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Worker Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="workerLoginForm" action="index2.html">
+                        <div class="mb-3">
+                            <label for="workerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="workerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="workerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-success">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Authority Signup Modal -->
+    <div class="modal fade" id="authoritySignupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Authority Sign Up</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="authoritySignupForm" action="index.html">
+                        <div class="mb-3">
+                            <label for="authoritySignupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="authoritySignupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authoritySignupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="authoritySignupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authoritySignupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="authoritySignupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authoritySignupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="authoritySignupConfirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authoritySignupDepartment" class="form-label">Department</label>
+                            <input type="text" class="form-control" id="authoritySignupDepartment" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="authoritySignupPosition" class="form-label">Position</label>
+                            <input type="text" class="form-control" id="authoritySignupPosition" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Citizen Signup Modal -->
+    <div class="modal fade" id="citizenSignupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Citizen Sign Up</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="citizenSignupForm" action="index1.html">
+                        <div class="mb-3">
+                            <label for="citizenSignupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="citizenSignupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenSignupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="citizenSignupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenSignupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="citizenSignupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenSignupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="citizenSignupConfirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenSignupAddress" class="form-label">Address</label>
+                            <textarea class="form-control" id="citizenSignupAddress" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="citizenSignupPhone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="citizenSignupPhone" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Worker Signup Modal -->
+    <div class="modal fade" id="workerSignupModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Worker Sign Up</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="workerSignupForm" action="index2.html">
+                        <div class="mb-3">
+                            <label for="workerSignupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="workerSignupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerSignupEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="workerSignupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerSignupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="workerSignupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerSignupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="workerSignupConfirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerSignupRole" class="form-label">Role</label>
+                            <select class="form-select" id="workerSignupRole" required>
+                                <option value="">Select Role</option>
+                                <option value="collector">Waste Collector</option>
+                                <option value="processor">Waste Processor</option>
+                                <option value="supervisor">Supervisor</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="workerSignupExperience" class="form-label">Years of Experience</label>
+                            <input type="number" class="form-control" id="workerSignupExperience" min="0" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>ECOCITY</h5>
+                    <p>Making the world cleaner, one step at a time.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

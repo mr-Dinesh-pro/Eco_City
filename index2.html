@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System - Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            color: #00ff7f !important;
+            cursor: pointer;
+        }
+        .waste-image {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            max-width: 80%;
+            max-height: 80vh;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
+        .card {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-body {
+            color: #fff;
+        }
+        .text-success {
+            color: #00ff7f !important;
+        }
+        .bg-success {
+            background-color: #00ff7f !important;
+        }
+        .btn-outline-success {
+            color: #00ff7f;
+            border-color: #00ff7f;
+        }
+        .btn-outline-success:hover {
+            background-color: #00ff7f;
+            color: #000;
+        }
+        footer {
+            background: rgba(20, 20, 20, 0.9) !important;
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html"><i class="fas fa-recycle"></i> Eco-City</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <img src="" alt="Waste Location" class="waste-image" id="wasteImage">
+
+    <!-- Works Assigned Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 text-success">Works Assigned</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm work-card" data-image="images/zone-a-waste.jpg" data-location="https://maps.google.com/?q=Downtown+Area">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">Zone A - Downtown</h5>
+                            </div>
+                            <p class="card-text">Residential waste collection scheduled for Monday and Thursday</p>
+                            <p><strong>Location:</strong> Main Street between 5th and 10th Avenue</p>
+                            <p><strong>Type of Waste:</strong> Household, Recyclables</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% Complete</div>
+                            </div>
+                            <a href="#" class="btn btn-outline-success btn-sm mt-2 location-btn">Open in Maps</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm work-card" data-image="images/zone-b-waste.jpg" data-location="https://maps.google.com/?q=Industrial+Park">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">Zone B - Industrial Park</h5>
+                            </div>
+                            <p class="card-text">Industrial waste collection scheduled for Tuesday and Friday</p>
+                            <p><strong>Location:</strong> Industrial Park Road, Sector 4</p>
+                            <p><strong>Type of Waste:</strong> Industrial, Chemical</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">45% Complete</div>
+                            </div>
+                            <a href="#" class="btn btn-outline-success btn-sm mt-2 location-btn">Open in Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm work-card" data-image="images/zone-c-waste.jpg" data-location="https://maps.google.com/?q=Suburban+Area">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">Zone C - Suburban Area</h5>
+                            </div>
+                            <p class="card-text">General waste collection scheduled for Wednesday and Saturday</p>
+                            <p><strong>Location:</strong> Green Valley Residential Complex</p>
+                            <p><strong>Type of Waste:</strong> Household, Garden</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90% Complete</div>
+                            </div>
+                            <a href="#" class="btn btn-outline-success btn-sm mt-2 location-btn">Open in Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm work-card" data-image="images/zone-d-waste.jpg" data-location="https://maps.google.com/?q=Commercial+District">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-success me-3"></i>
+                                <h5 class="card-title mb-0">Zone D - Commercial District</h5>
+                            </div>
+                            <p class="card-text">Commercial waste collection scheduled for daily pickup</p>
+                            <p><strong>Location:</strong> Shopping Mall Complex, Business Avenue</p>
+                            <p><strong>Type of Waste:</strong> Commercial, Food</p>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60% Complete</div>
+                            </div>
+                            <a href="#" class="btn btn-outline-success btn-sm mt-2 location-btn">Open in Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><a href="home.html" class="text-light text-decoration-none">ECoCity</a></h5>
+                    <p>Making the world cleaner, one step at a time.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const workCards = document.querySelectorAll('.work-card');
+            const overlay = document.getElementById('overlay');
+            const wasteImage = document.getElementById('wasteImage');
+            const locationButtons = document.querySelectorAll('.location-btn');
+
+            workCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const imageUrl = this.dataset.image;
+                    wasteImage.src = imageUrl;
+                    overlay.style.display = 'block';
+                    wasteImage.style.display = 'block';
+                });
+            });
+
+            overlay.addEventListener('click', function() {
+                overlay.style.display = 'none';
+                wasteImage.style.display = 'none';
+            });
+
+            locationButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const locationUrl = this.closest('.work-card').dataset.location;
+                    window.open(locationUrl, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

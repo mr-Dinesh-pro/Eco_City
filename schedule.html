@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System - Schedule Pickup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            color: #00ff7f !important;
+            cursor: pointer;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        .nav-link.active {
+            color: #00ff7f !important;
+        }
+        .schedule-section {
+            background: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(15px);
+        }
+        .card {
+            background: rgba(30, 30, 30, 0.8);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .form-control, .form-select {
+            background: rgba(50, 50, 50, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+        .form-control:focus, .form-select:focus {
+            background: rgba(60, 60, 60, 0.8);
+            color: #fff;
+            border-color: #00ff7f;
+            box-shadow: 0 0 0 0.25rem rgba(0, 255, 127, 0.25);
+        }
+        .form-label {
+            color: #00ff7f;
+        }
+        .btn-success {
+            background: rgba(0, 255, 127, 0.2);
+            border-color: #00ff7f;
+            color: #00ff7f;
+        }
+        .btn-success:hover {
+            background: rgba(0, 255, 127, 0.3);
+            border-color: #00ff7f;
+            color: #fff;
+        }
+        .btn-outline-success {
+            color: #00ff7f;
+            border-color: #00ff7f;
+        }
+        .btn-outline-success:hover {
+            background: rgba(0, 255, 127, 0.2);
+            color: #fff;
+        }
+        footer {
+            background: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .social-links a {
+            color: #00ff7f;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.html" style="text-decoration: none;"><i class="fas fa-recycle"></i> EcoWaste</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="schedule.html">Schedule Pickup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="track.html">Track Waste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="complaint.html">Complaints</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Schedule Section -->
+    <section class="py-5 schedule-section">
+        <div class="container">
+            <h2 class="text-center mb-5 text-success">Schedule Pickup</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="scheduleForm" action="index.html" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Address</label>
+                                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="date" class="form-label">Preferred Date</label>
+                                    <input type="date" class="form-control" id="date" name="date" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="time" class="form-label">Preferred Time</label>
+                                    <select class="form-select" id="time" name="time" required>
+                                        <option value="">Select time slot</option>
+                                        <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                        <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                        <option value="evening">Evening (4:00 PM - 8:00 PM)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="wasteType" class="form-label">Waste Type</label>
+                                    <select class="form-select" id="wasteType" name="wasteType" required>
+                                        <option value="">Select waste type</option>
+                                        <option value="general">General Waste</option>
+                                        <option value="recycling">Recycling</option>
+                                        <option value="organic">Organic Waste</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-label">Estimated Quantity</label>
+                                    <select class="form-select" id="quantity" name="quantity" required>
+                                        <option value="">Select quantity</option>
+                                        <option value="small">Small (1-2 bags)</option>
+                                        <option value="medium">Medium (3-5 bags)</option>
+                                        <option value="large">Large (6+ bags)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="notes" class="form-label">Additional Notes</label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Waste Location Photo</label>
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="btn btn-outline-success" id="openCamera" onclick="startCamera()">
+                                            <i class="fas fa-camera"></i> Open Camera
+                                        </button>
+                                        <button type="button" class="btn btn-outline-success" onclick="document.getElementById('imageInput').click()">
+                                            <i class="fas fa-upload"></i> Upload Image
+                                        </button>
+                                    </div>
+                                    <input type="file" id="imageInput" name="wasteImage" accept="image/*" class="d-none" onchange="handleImageUpload(event)">
+                                    <div id="cameraContainer" class="mt-3 d-none">
+                                        <video id="camera" autoplay playsinline class="w-100 rounded"></video>
+                                        <button type="button" class="btn btn-success mt-2" onclick="captureImage()">
+                                            <i class="fas fa-camera"></i> Capture
+                                        </button>
+                                    </div>
+                                    <div id="imagePreview" class="mt-3 d-none">
+                                        <img id="preview" class="img-fluid rounded" alt="Waste Location">
+                                        <button type="button" class="btn btn-danger mt-2" onclick="removeImage()">
+                                            <i class="fas fa-trash"></i> Remove Image
+                                        </button>
+                                        <input type="hidden" id="capturedImage" name="capturedImage">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success w-100">Schedule Pickup</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-success">Ecocity</h5>
+                    <p>Making the world cleaner, one step at a time.</p>
+                </div>
+                <div class="col-md-6 text-md-end social-links">
+                    <h5 class="text-success">Follow Us</h5>
+                    <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        let stream;
+        let imageCapture;
+
+        async function startCamera() {
+            try {
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                const video = document.getElementById('camera');
+                video.srcObject = stream;
+                document.getElementById('cameraContainer').classList.remove('d-none');
+                const track = stream.getVideoTracks()[0];
+                imageCapture = new ImageCapture(track);
+            } catch (err) {
+                console.error('Error accessing camera:', err);
+                alert('Error accessing camera. Please make sure you have granted camera permissions.');
+            }
+        }
+
+        async function captureImage() {
+            try {
+                const blob = await imageCapture.takePhoto();
+                const imageUrl = URL.createObjectURL(blob);
+                displayImage(imageUrl);
+                stream.getTracks().forEach(track => track.stop());
+                document.getElementById('cameraContainer').classList.add('d-none');
+                
+                // Convert blob to base64 for form submission
+                const reader = new FileReader();
+                reader.readAsDataURL(blob);
+                reader.onloadend = function() {
+                    document.getElementById('capturedImage').value = reader.result;
+                }
+            } catch (err) {
+                console.error('Error capturing image:', err);
+            }
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const imageUrl = URL.createObjectURL(file);
+                displayImage(imageUrl);
+                
+                // Convert file to base64 for form submission
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onloadend = function() {
+                    document.getElementById('capturedImage').value = reader.result;
+                }
+            }
+        }
+
+        function displayImage(imageUrl) {
+            const preview = document.getElementById('preview');
+            preview.src = imageUrl;
+            document.getElementById('imagePreview').classList.remove('d-none');
+        }
+
+        function removeImage() {
+            document.getElementById('preview').src = '';
+            document.getElementById('imagePreview').classList.add('d-none');
+            document.getElementById('imageInput').value = '';
+            document.getElementById('capturedImage').value = '';
+        }
+
+        // Form submission handler
+        document.getElementById('scheduleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            // The form is already set to submit to index.html
+            this.submit();
+        });
+    </script>
+</body>
+</html>
